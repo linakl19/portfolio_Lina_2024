@@ -16,7 +16,7 @@
 
     <!-- *** -->
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
             <ul class="nav_list">
                 <li class="nav_list-item">
                     <a class="nav_list-link" aria-current="page" href="./index.html"><img src="./img/logo_Lina.png"
-                            alt=""></a>
+                            alt="Logo image that links to the homepage"></a>
                 </li>
                 <li class="nav_list-item">
                     <ul class="nav_list-item-menu">
@@ -61,7 +61,7 @@
     </header>
     <main>
         <section class="welcome section" id="welcome">
-            <img class="welcome_Img" src="./img/welcome_Img.png" alt="">
+            <img class="welcome_Img" src="./img/welcome_Img.png" alt="Photo of Lina Martinez, software developer and former social worker">
             <div class="welcome_Header">
                 <h1>
                     Hi! I am
@@ -105,7 +105,7 @@
             <h2 class="h2_Title">My Work</h2>
             <div class="work_Projects">
                 <div class="work_Projects-Content">
-                    <img src="./img/byteBake_Bakery.png" alt="">
+                    <img src="./img/work_byteBake_Bakery.png" alt="Screenshot of the restaurant order page project.">
                     <div class="work_Projects-Content-Description">
                         <h3>Restaurant order page</h3>
                         <p>This project features an interface built with HTML and CSS, showcasing various bakery items
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="work_Projects-Content">
-                    <img src="./img/happyBirthday_Project.png" alt="">
+                    <img src="./img/work_HBD-Project.png" alt="Screenshot of the Birthday project, an interactive web-based birthday greeting card">
                     <div class="work_Projects-Content-Description">
                         <h3>Birthday project</h3>
                         <p>This project is a personalized, web-based birthday greeting card designed to celebrate a
@@ -145,6 +145,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="work_Projects-Content">
+                    <img src="./img/work_FutureProject.jpg" alt="Placeholder image for a future project, coming soon">
+                    <div class="work_Projects-Content-Description">
+                        <h3>Future project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ex voluptatibus dolore, nisi nulla impedit eos quibusdam unde hic deleniti, earum quia quos ipsum at corrupti debitis ducimus! Iusto, nihil.</p>
+                        <div class="work_Projects-Buttons">
+                            <a href="#" target="_blank">
+                                <button>
+                                    <i class="fa-solid fa-eye" style="color: #000000;"></i>
+                                    <span>See demo</span>
+                                </button></a>
+                            <a href="#" target="_blank">
+                                <button>
+                                    <i class="fa-brands fa-github" style="color: #232323;"></i>
+                                    <span>View repository</span>
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -152,16 +171,23 @@
 
             <div class="contact_Content">
                 <h2 class="h2_Title">Contact</h2>
-                <p>Do you want to contact me?<br>Fill out the form below and I will get in touch as soon as possible.
-                </p>
+                <p>Do you want to contact me?<br>Send a message to this email: <span>linamar.code@gmail.com</span> or fill out the form below and I will get in touch as soon as possible.</p>
                 <div class="contact_Content-Div">
                     <img src="./img/contact_Img-Girl.png" alt="">
                     <form action="" class="contact_Form">
-                        <input type="text" placeholder="Name" maxlength="50" required>
-                        <input type="email" placeholder="email@dominio.com" required>
-                        <input type="text" placeholder="Subject" maxlength="50" required>
-                        <textarea cols="60" rows="10" id="mensaje" placeholder="Message" maxlength="300" required></textarea>
-                        <input type="submit" value="Enviar Formulario" class="contact_Form-Button">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" maxlength="50" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="email@domain.com" required>
+                        
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" maxlength="50" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" cols="60" rows="10" placeholder="Message" maxlength="300" required></textarea>
+                        
+                        <input type="submit" value="Submit" class="contact_Form-Button" title="Submit Form">
                     </form>
                 </div>
             </div>

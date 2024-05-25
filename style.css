@@ -534,9 +534,8 @@ header {
 .work{
     width: 100%;
     padding-top: 5.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     background: linear-gradient(0deg, rgba(222,247,247,0.2) 0%, rgba(255,255,255,0.2) 100%), url(./img/work_Background.jpg);
     background-position: right;
     background-repeat: no-repeat;
@@ -552,9 +551,8 @@ header {
     background-color:rgba(255, 255, 255, 0.2);
 }
 .work_Projects-Content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     padding: 0 0.5rem;
     margin: 0 auto;
 }
@@ -631,11 +629,12 @@ header {
         width: 85%;
     }
     .work_Projects-Content{
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr;
         width: 100%;
     }
     .work_Projects-Content img{
-        width: 50%;
+        place-self: center;
+        width: 75%;
     } 
     .work_Projects-Content-Description{
         font-size: 1.12rem;
@@ -653,10 +652,9 @@ header {
         gap: 3rem;
     }
     .work_Projects-Content img{
-        width: 40%;
+        width: 75%;
     } 
     .work_Projects-Content-Description{
-        width: 45%;
         font-size: 1.13rem;
     }
 }
@@ -669,11 +667,7 @@ header {
         width: 90%;
         justify-content: center;
     }
-    .work_Projects-Content img{
-        width: 40%;
-    } 
     .work_Projects-Content-Description{
-        width: 40%;
         font-size: 1.14rem;
     }
 }
@@ -699,7 +693,11 @@ header {
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 .contact_Content p{
-    padding: 0 1.5rem;
+    padding: 0 2rem;
+    width:90%
+}
+.contact_Content p span{
+    text-decoration: underline;
 }
 .contact_Content-Div{
     display: flex;
@@ -712,10 +710,13 @@ header {
 .contact_Content-Div img{
     display: none;
 }
-.contact_Content-Div form{
+.contact_Form{
     width: 90%;
     margin: 1rem auto;
     padding: 1rem;
+}
+.contact_Form label{
+    display: none;
 }
 .contact_Form input, textarea{
     width: 100%;
@@ -748,11 +749,14 @@ header {
 .contact_Form-Button{
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     transition: 1s;
+    font-family: var(--font-family-text);
+    color: var(--color-text);
 }
 .contact_Form-Button:hover{
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(229,249,255,1) 100%);
     border-color: #c5dee6;
     cursor: pointer;
+    color: var(--color-title);
     transform: var(--transform);
 }
 @media only screen and (min-width: 576px){
@@ -826,3 +830,5 @@ footer{
 footer a{
     color: var(--color-text);
 }
+
+/* END :) */
