@@ -787,6 +787,9 @@ header {
     .contact_Content{
         font-size: 1.13rem;
     }
+    .contact_Content p{
+        width: 60%;
+    }
     .contact_Content-Div{
         width: 85%;
     }
